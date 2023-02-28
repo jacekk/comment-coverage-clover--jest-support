@@ -1,0 +1,9 @@
+{
+  "name": "comment-coverage-clover--jest-support",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jacekk/comment-coverage-clover--jest-support.git",
+  "author": "jacekk",
+  "license": "MIT",
+  "private": false
+}
