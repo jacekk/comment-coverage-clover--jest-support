@@ -1,7 +1,9 @@
-export function twoA1() {
+function twoA1() {
 	return 'twoA1'
 }
 
-export function twoA2() {
+function twoA2() {
 	return 'twoA2'
 }
+
+module.exports = { twoA1, twoA2 }

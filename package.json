@@ -5,5 +5,11 @@
   "repository": "git@github.com:jacekk/comment-coverage-clover--jest-support.git",
   "author": "jacekk",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^29.4.3"
+  }
 }
