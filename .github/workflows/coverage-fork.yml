@@ -1,0 +1,27 @@
+name: Coverage Fork
+
+on: [push]
+
+permissions:
+    pull-requests: write
+
+jobs:
+    coverage_report:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  cache: 'yarn'
+                  node-version: 18
+            - run: yarn install
+            - run: yarn test
+
+            - uses: jacekk/comment-coverage-clover@develop
+              with:
+                  dir-prefix: ${{ github.workspace }}
+                  file: ./coverage/clover.xml
+                  show-percentage-change-on-table: true
+                  table-coverage-change: 0.1
+                  with-chart: false
+                  with-table: true
